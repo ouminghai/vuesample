@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Index from '../views/index'
 
 import game from '../views/game'
-import file from '../views/film'
+import film from '../views/film'
 
 Vue.use(VueRouter)
 
