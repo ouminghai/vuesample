@@ -4,13 +4,12 @@ import Index from '../views/index'
 
 import game from '../views/game'
 import film from '../views/film'
-
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
   routes: [
     {
-      path: '/',
+      path: '/index',
       name: 'index',
       component: Index,
       children: [
@@ -23,6 +22,14 @@ export default new VueRouter({
           component: film
         }
       ]
+    },
+    {
+      path: '/login',
+      component: require('../views/User/Login')
+    },
+    {
+      path: '*', redirect: '/index/game'
     }
   ]
 })
+export default router
