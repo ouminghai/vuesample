@@ -35,3 +35,19 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 ``` TEXT
   尝试使用vue vue-router vuex webpack
 ```
+
+```
+项目结构
+
+-src
+  |
+  +---assets
+  |
+  +---components 小组件模块
+  |
+  +---router
+  |
+  +---views  视图组件
+  |
+  +---App.vue
+```
