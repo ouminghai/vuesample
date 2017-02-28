@@ -1,26 +1,42 @@
 <template>
   <div>
+
       <mu-appbar title="Title">
+
         <mu-icon-button icon='menu' slot="left"/>
-        <mu-icon-button icon='expand_more' slot="right"/>
+        <mu-icon-menu icon="more_vert" slot="right">
+          <mu-menu-item title="菜单 1"/>
+          <mu-menu-item title="菜单 2"/>
+          <mu-menu-item title="菜单 3"/>
+          <mu-menu-item title="菜单 4"/>
+          <mu-menu-item title="菜单 5"/>
+        </mu-icon-menu>
       </mu-appbar>
+
       <mu-tabs :value="activeTab" @change="handleTabChange" >
         <mu-tab value="game" title="热游"/>
         <mu-tab value="film" title="热影"/>
       </mu-tabs>
-    <div class="view">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
-    </div>
+
+      <div class="view">
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+      </div>
+
   </div>
 </template>
 <style lang="less" >
   @import "../assets/theme.less";
   .game-wrap{
-  .mu-card{
-    margin-bottom:10px
+    .mu-card{
+      margin-bottom:10px
+    }
   }
+  .banner-item{
+    width: 100%;
+    height: 18rem;
+    background-size: cover;
   }
 </style>
 <script>
