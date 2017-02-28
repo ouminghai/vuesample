@@ -7,7 +7,19 @@
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import Player from './components/playerBar'
+  export default {
+    name: 'app',
+    data () {
+      return {
+
+      }
+    },
+    components: {
+      Player
+    },
+    computed: {
+
+    }
+  }
 </script>

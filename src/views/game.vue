@@ -22,7 +22,7 @@
         </mu-card-header>
         <mu-card-media title="Image Title" subTitle="Image Sub Title">
           <img :src="img+card.img" />
-        </mu-card-media>
+        </mu-card-media>6
       </mu-card>
 
 
@@ -38,7 +38,17 @@
       return {
         swiperOption: {
           pagination: '.swiper-pagination',
-          paginationClickable: true
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+          }
         },
         img: 'static/assets/game/',
         gameList: [
